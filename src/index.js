@@ -8,14 +8,19 @@ import { ConfigProvider } from "antd";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ConfigProvider
-      theme={{
-        token: {
-          colorPrimary: "#35A8DF",
-        },
-      }}
-    >
-      <App />
-    </ConfigProvider>
+    <BrowserRouter>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: "#35A8DF",
+          },
+        }}
+      >
+        <Routes>
+          {/* <Route path="/" element={<Login />} /> */}
+          <Route path="/" element={<App />} />
+        </Routes>
+      </ConfigProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

@@ -12,84 +12,12 @@ import { FaTruckFast } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { LeftOutlined } from "@ant-design/icons";
 import Search from "antd/es/input/Search";
-import { Pie } from "@ant-design/plots";
-// import { Line } from "@ant-design/charts";
 import React, { useState } from "react";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
-
-  // const lineData = [
-  //   { year: "1991", value: 3 },
-  //   { year: "1992", value: 4 },
-  //   { year: "1993", value: 3.5 },
-  //   { year: "1994", value: 5 },
-  //   { year: "1995", value: 4.9 },
-  //   { year: "1996", value: 6 },
-  //   { year: "1997", value: 7 },
-  //   { year: "1998", value: 9 },
-  //   { year: "1999", value: 13 },
-  // ];
-  // const lineConfig = {
-  //   lineData,
-  //   height: 400,
-  //   xField: "year",
-  //   yField: "value",
-  //   point: {
-  //     size: 5,
-  //     shape: "diamond | circule",
-  //   },
-  // };
-
-  const data = [
-    {
-      type: "Active",
-      value: 30,
-    },
-    {
-      type: "Online",
-      value: 30,
-    },
-    {
-      type: "None",
-      value: 40,
-    },
-  ];
-
-  const config = {
-    appendPadding: 10,
-    data,
-    angleField: "value",
-    colorField: "type",
-    radius: 1,
-    innerRadius: 0.6,
-    label: {
-      type: "inner",
-      offset: "-50%",
-      content: "{value}",
-      style: {
-        textAlign: "center",
-        fontSize: 14,
-      },
-    },
-    interactions: [
-      {
-        type: "element-selected",
-      },
-    ],
-    statistic: {
-      title: false,
-      content: {
-        style: {
-          whiteSpace: "pre-wrap",
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-        },
-        content: "Donut Chart",
-      },
-    },
-  };
 
   const onSearch = (value, _e, info) => console.log(info?.source, value);
 
@@ -148,12 +76,12 @@ function App() {
               label: "Dashboard",
             },
             {
-              key: "/materials_clinical",
+              key: "/materials",
               icon: <FaUserSecret />,
               label: "Materials / Clinical resources management",
             },
             {
-              key: "/subscription",
+              key: "/subscriptions",
               icon: <MdOutlineAdminPanelSettings />,
               label: "Subscription",
             },
@@ -163,7 +91,7 @@ function App() {
               label: "App user management",
             },
             {
-              key: "/activity_task_manager",
+              key: "/activity",
               icon: <BsCarFront />,
               label: "Activity / Tasks manager",
             },
@@ -173,12 +101,12 @@ function App() {
               label: "Reports",
             },
             {
-              key: "/kpi_config",
+              key: "/kpiconfig",
               icon: <RiCustomerService2Line />,
               label: "KPI configuration",
             },
             {
-              key: "/profile_settings",
+              key: "/settings",
               icon: <FaTruckFast />,
               label: "Profile Settings",
             },
@@ -215,18 +143,7 @@ function App() {
           />
         </Header>
         <Content>
-          <div
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <div>
-              <Pie {...config} />
-            </div>
-            <div>{/* <Line {...lineConfig} /> */}</div>
-          </div>
+          <Dashboard />
         </Content>
       </Layout>
     </Layout>

@@ -141,7 +141,9 @@ export default function Users() {
             }}
           />
         </Header>
-        <Content>App User Management Page</Content>
+        <Content style={{ backgroundColor: "#FFF" }}>
+          App User Management Page
+        </Content>
       </Layout>
     </Layout>
   );

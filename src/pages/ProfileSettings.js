@@ -141,7 +141,9 @@ export default function ProfileSettings() {
             }}
           />
         </Header>
-        <Content>Profile Settings Page</Content>
+        <Content style={{ backgroundColor: "#FFF" }}>
+          Profile Settings Page
+        </Content>
       </Layout>
     </Layout>
   );

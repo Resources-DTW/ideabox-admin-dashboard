@@ -141,7 +141,7 @@ export default function Reports() {
             }}
           />
         </Header>
-        <Content>Reports Page</Content>
+        <Content style={{ backgroundColor: "#FFF" }}>Reports Page</Content>
       </Layout>
     </Layout>
   );

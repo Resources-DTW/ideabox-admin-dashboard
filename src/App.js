@@ -142,7 +142,7 @@ function App() {
             }}
           />
         </Header>
-        <Content>
+        <Content style={{ backgroundColor: "#FFF" }}>
           <Dashboard />
         </Content>
       </Layout>

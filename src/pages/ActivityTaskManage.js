@@ -141,7 +141,9 @@ export default function ActivityTaskManage() {
             }}
           />
         </Header>
-        <Content>Activity / Task Manager Page</Content>
+        <Content style={{ backgroundColor: "#FFF" }}>
+          Activity / Task Manager Page
+        </Content>
       </Layout>
     </Layout>
   );

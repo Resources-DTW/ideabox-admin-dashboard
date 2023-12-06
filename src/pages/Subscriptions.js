@@ -141,7 +141,9 @@ export default function Subscriptions() {
             }}
           />
         </Header>
-        <Content>Subscriptions Page</Content>
+        <Content style={{ backgroundColor: "#FFF" }}>
+          Subscriptions Page
+        </Content>
       </Layout>
     </Layout>
   );

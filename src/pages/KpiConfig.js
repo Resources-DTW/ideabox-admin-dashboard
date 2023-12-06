@@ -141,7 +141,9 @@ export default function KpiConfig() {
             }}
           />
         </Header>
-        <Content>KPI Configuration Page</Content>
+        <Content style={{ backgroundColor: "#FFF" }}>
+          KPI Configuration Page
+        </Content>
       </Layout>
     </Layout>
   );

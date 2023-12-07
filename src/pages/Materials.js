@@ -41,8 +41,27 @@ export default function Materials() {
         </div>
       ),
       children: (
-        <div>
-          <h2 style={{ fontWeight: 400 }}>Material 1</h2>
+        <div style={{ paddingLeft: 20, paddingRight: 20 }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              flexDirection: "row",
+            }}
+          >
+            <h2 style={{ fontWeight: 400 }}>Material 1</h2>
+            <Button type="primary">Edit</Button>
+          </div>
+          <p>Patient/ Clinical</p>
+          <p style={{ fontSize: 20, fontWeight: 700 }}>About The Cource</p>
+          <p>6 Days Training Program.</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
         </div>
       ),
       showArrow: false,
@@ -68,8 +87,27 @@ export default function Materials() {
         </div>
       ),
       children: (
-        <div>
-          <p>Paragraph</p>
+        <div style={{ paddingLeft: 20, paddingRight: 20 }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              flexDirection: "row",
+            }}
+          >
+            <h2 style={{ fontWeight: 400 }}>Material 2</h2>
+            <Button type="primary">Edit</Button>
+          </div>
+          <p>Patient/ Clinical</p>
+          <p style={{ fontSize: 20, fontWeight: 700 }}>About The Cource</p>
+          <p>6 Days Training Program.</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
         </div>
       ),
       showArrow: false,
@@ -95,8 +133,27 @@ export default function Materials() {
         </div>
       ),
       children: (
-        <div>
-          <p>Paragraph</p>
+        <div style={{ paddingLeft: 20, paddingRight: 20 }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              flexDirection: "row",
+            }}
+          >
+            <h2 style={{ fontWeight: 400 }}>Material 3</h2>
+            <Button type="primary">Edit</Button>
+          </div>
+          <p>Patient/ Clinical</p>
+          <p style={{ fontSize: 20, fontWeight: 700 }}>About The Cource</p>
+          <p>6 Days Training Program.</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
         </div>
       ),
       showArrow: false,
@@ -243,19 +300,15 @@ export default function Materials() {
               paddingBottom: 50,
             }}
           >
-            <button
+            <Button
+              type="primary"
               style={{
-                backgroundColor: "#35A8DF",
-                border: "none",
-                padding: 15,
-                borderRadius: 10,
-                color: "white",
                 cursor: "pointer",
                 fontWeight: "bold",
               }}
             >
               Add Disorder
-            </button>
+            </Button>
           </div>
           <div
             style={{

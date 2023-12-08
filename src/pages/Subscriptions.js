@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Content, Header } from "antd/es/layout/layout";
 import { Button, Image, Layout, Menu } from "antd";
 import Logo from "../assets/logo.png";
@@ -19,6 +19,49 @@ export default function Subscriptions() {
   const navigate = useNavigate();
 
   const onSearch = (value, _e, info) => console.log(info?.source, value);
+
+  const handleEditClick = (item) => {
+    navigate("/editSubscription", item);
+  };
+
+  const data = [
+    {
+      title: "Guest User",
+      duration: "10 days",
+      disorder_count: "1 Disorder",
+      material_count: "1 Material",
+      payment: "Free",
+      special_discount: "1 Disorder",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
+    },
+    {
+      title: "Free Trail",
+      duration: "10 days",
+      disorder_count: "1 Disorder",
+      material_count: "1 Material",
+      payment: "Free",
+      special_discount: "1 Disorder",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
+    },
+    {
+      title: "Monthly",
+      duration: "$30/per month",
+      disorder_count: "1 Disorder",
+      material_count: "1 Material",
+      payment: "Free",
+      special_discount: "1 Disorder",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
+    },
+    {
+      title: "Yearly",
+      duration: "$220/per month",
+      disorder_count: "1 Disorder",
+      material_count: "1 Material",
+      payment: "Free",
+      special_discount: "1 Disorder",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an",
+    },
+  ];
 
   return (
     <Layout style={{ height: "100vh", width: "100%" }}>
@@ -142,7 +185,121 @@ export default function Subscriptions() {
           />
         </Header>
         <Content style={{ backgroundColor: "#FFF" }}>
-          Subscriptions Page
+          <div style={{ padding: 20 }}>
+            <h1>Patient</h1>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexDirection: "row",
+                paddingTop: 20,
+                paddingLeft: 20,
+                paddingRight: 20,
+                gap: 20,
+              }}
+            >
+              {data.map((item, i) => (
+                <div
+                  onClick={() =>
+                    navigate(`/editSubscription`, { state: { item } })
+                  }
+                  key={i}
+                  style={{
+                    textAlign: "center",
+                    border: "1px solid #35A8DF",
+                    backgroundColor: "#35A8DF",
+                    borderRadius: 10,
+                    padding: 40,
+                    cursor: "pointer",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: 19,
+                      fontWeight: 500,
+                      textAlign: "center",
+                      color: "white",
+                    }}
+                  >
+                    {item.title}
+                  </p>
+                  <p
+                    style={{
+                      color: "white",
+                      border: "1px solid #fff",
+                      borderRadius: 20,
+                      padding: 8,
+                    }}
+                  >
+                    {item.duration}
+                  </p>
+                  <p style={{ color: "white" }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div
+            style={{
+              paddingLeft: 20,
+              paddingRight: 20,
+              paddingTop: 20,
+              paddingBottom: 60,
+            }}
+          >
+            <h1>Clinician</h1>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexDirection: "row",
+                paddingTop: 20,
+                paddingLeft: 20,
+                paddingRight: 20,
+                gap: 20,
+              }}
+            >
+              {data.map((item, i) => (
+                <div
+                  onClick={() =>
+                    navigate(`/editSubscription`, { state: { item } })
+                  }
+                  style={{
+                    textAlign: "center",
+                    border: "1px solid #35A8DF",
+                    borderRadius: 10,
+                    padding: 40,
+                    backgroundColor: "#35A8DF",
+                    cursor: "pointer",
+                  }}
+                  key={i}
+                >
+                  <p
+                    style={{
+                      fontSize: 19,
+                      fontWeight: 500,
+                      textAlign: "center",
+                      color: "white",
+                    }}
+                  >
+                    {item.title}
+                  </p>
+                  <p
+                    style={{
+                      color: "white",
+                      border: "1px solid #fff",
+                      borderRadius: 20,
+                      padding: 8,
+                    }}
+                  >
+                    {item.duration}
+                  </p>
+                  <p style={{ color: "white" }}>{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </Content>
       </Layout>
     </Layout>

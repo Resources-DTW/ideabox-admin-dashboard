@@ -13,6 +13,7 @@ import ActivityTaskManage from "./pages/ActivityTaskManage";
 import Reports from "./pages/Reports";
 import KpiConfig from "./pages/KpiConfig";
 import ProfileSettings from "./pages/ProfileSettings";
+import EditSubscription from "./pages/EditSubscription";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -35,6 +36,10 @@ root.render(
           <Route
             path="/subscriptions"
             element={<Protected Component={Subscriptions} />}
+          />
+          <Route
+            path="/editSubscription"
+            element={<Protected Component={EditSubscription} />}
           />
           <Route path="/users" element={<Protected Component={Users} />} />
           <Route

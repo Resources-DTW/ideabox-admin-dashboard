@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Content, Header } from "antd/es/layout/layout";
-import { Button, Image, Layout, Menu } from "antd";
+import { Button, Image, Layout, Menu, Form, Input } from "antd";
 import Logo from "../assets/logo.png";
 import Sider from "antd/es/layout/Sider";
 import { BiHomeAlt2 } from "react-icons/bi";
@@ -13,13 +13,40 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { LeftOutlined } from "@ant-design/icons";
 import Search from "antd/es/input/Search";
 import React, { useState } from "react";
-import UserAlt from "../assets/user_alt.png";
 
-export default function ProfileSettings() {
+export default function EditSubscription() {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const item = location.state ? location.state.item : null;
+
+  //   console.log(item);
 
   const onSearch = (value, _e, info) => console.log(info?.source, value);
+
+  const [formData, setFormData] = useState({
+    title: item.title,
+    disorder_count: item.disorder_count,
+    material_count: item.material_count,
+    payment: item.payment,
+    desc: item.desc,
+    special_discount: item.special_discount,
+    duration: item.duration,
+  });
+
+  const handleInputChange = (field, value) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [field]: value,
+    }));
+  };
+
+  const handleSave = () => {
+    // Handle the save logic with the updated formData
+    console.log("Saved Data:", formData);
+    navigate("/subscriptions");
+  };
 
   return (
     <Layout style={{ height: "100vh", width: "100%" }}>
@@ -65,7 +92,7 @@ export default function ProfileSettings() {
         <Menu
           style={{ backgroundColor: "#35A8DF", color: "white" }}
           mode="inline"
-          defaultSelectedKeys={["/settings"]}
+          defaultSelectedKeys={["/subscriptions"]}
           onClick={(item) => {
             navigate(item.key);
           }}
@@ -142,46 +169,79 @@ export default function ProfileSettings() {
             }}
           />
         </Header>
-        <Content
-          style={{
-            backgroundColor: "#FFF",
-            alignItems: "center",
-            justifyContent: "center",
-            display: "flex",
-          }}
-        >
-          <div
+        <Content style={{ backgroundColor: "#FFF", padding: 20 }}>
+          <h1>Edit {item.title}</h1>
+          <Form
+            labelCol={{
+              span: 4,
+            }}
+            wrapperCol={{
+              span: 14,
+            }}
+            layout="horizontal"
             style={{
-              textAlign: "center",
-              paddingLeft: 160,
-              paddingRight: 160,
-              paddingTop: 50,
-              paddingBottom: 50,
-              borderRadius: 10,
-              backgroundColor: "#F5F5F5",
+              padding: 20,
+              maxWidth: 900,
             }}
           >
-            <img src={UserAlt} alt="User" width={180} />
-            <p>Name: Karthik</p>
-            <p>Age: 44</p>
-            <p>Joined Date: 08/12/2023</p>
-            <p>Gender: Male</p>
-            <p>Country: India</p>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+            <Form.Item label="Title">
+              <Input
+                value={formData.title}
+                onChange={(e) => handleInputChange("title", e.target.value)}
+              />
+            </Form.Item>
+            <Form.Item label="Disorder count">
+              <Input
+                value={formData.disorder_count}
+                onChange={(e) =>
+                  handleInputChange("disorder_count", e.target.value)
+                }
+              />
+            </Form.Item>
+            <Form.Item label="Material Count">
+              <Input
+                value={formData.material_count}
+                onChange={(e) =>
+                  handleInputChange("material_count", e.target.value)
+                }
+              />
+            </Form.Item>
+            <Form.Item label="Payment">
+              <Input
+                value={formData.payment}
+                onChange={(e) => handleInputChange("payment", e.target.value)}
+              />
+            </Form.Item>
+            <Form.Item label="Description">
+              <Input
+                value={formData.desc}
+                onChange={(e) => handleInputChange("desc", e.target.value)}
+              />
+            </Form.Item>
+            <Form.Item label="Special Discount">
+              <Input
+                value={formData.special_discount}
+                onChange={(e) =>
+                  handleInputChange("special_discount", e.target.value)
+                }
+              />
+            </Form.Item>
+            <Form.Item label="Amount of time">
+              <Input
+                value={formData.duration}
+                onChange={(e) => handleInputChange("duration", e.target.value)}
+              />
+            </Form.Item>
+            <Form.Item
+              wrapperCol={{
+                offset: 4,
               }}
             >
-              <Button style={{ margin: 20 }} type="primary">
-                Edit
+              <Button type="primary" onClick={handleSave}>
+                Save
               </Button>
-              <Button style={{ margin: 20 }} type="primary" danger>
-                Log Out
-              </Button>
-            </div>
-          </div>
+            </Form.Item>
+          </Form>
         </Content>
       </Layout>
     </Layout>

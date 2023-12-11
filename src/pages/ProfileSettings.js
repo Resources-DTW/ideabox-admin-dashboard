@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Content, Header } from "antd/es/layout/layout";
-import { Button, Image, Layout, Menu } from "antd";
+import { Button, Image, Layout, Menu, Avatar } from "antd";
 import Logo from "../assets/logo.png";
 import Sider from "antd/es/layout/Sider";
 import { BiHomeAlt2 } from "react-icons/bi";
@@ -13,7 +13,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { LeftOutlined } from "@ant-design/icons";
 import Search from "antd/es/input/Search";
 import React, { useState } from "react";
-import UserAlt from "../assets/user_alt.png";
+
+const user = {
+  name: "Karthik",
+  age: "22",
+  joinedDate: "08/12/2023",
+  gender: "Male",
+  country: "India",
+};
 
 export default function ProfileSettings() {
   const [collapsed, setCollapsed] = useState(false);
@@ -161,12 +168,21 @@ export default function ProfileSettings() {
               backgroundColor: "#F5F5F5",
             }}
           >
-            <img src={UserAlt} alt="User" width={180} />
-            <p>Name: Karthik</p>
-            <p>Age: 44</p>
-            <p>Joined Date: 08/12/2023</p>
-            <p>Gender: Male</p>
-            <p>Country: India</p>
+            <Avatar
+              size={114}
+              style={{
+                backgroundColor: "#b8e6fc",
+                color: "#35A8DF",
+                fontSize: 60,
+              }}
+            >
+              {user.name[0]}
+            </Avatar>
+            <p>Name: {user.name}</p>
+            <p>Age: {user.age}</p>
+            <p>Joined Date: {user.joinedDate}</p>
+            <p>Gender: {user.gender}</p>
+            <p>Country: {user.country}</p>
             <div
               style={{
                 display: "flex",

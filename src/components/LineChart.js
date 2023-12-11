@@ -14,8 +14,8 @@ export default function LineChart() {
 
   const config = {
     data,
-    width: 600,
-    height: 400,
+    width: 500,
+    height: 300,
     autoFit: false,
     xField: "day",
     yField: "users",
@@ -33,7 +33,7 @@ export default function LineChart() {
   return (
     <div
       style={{
-        backgroundColor: "#D7D7D7",
+        backgroundColor: "#fff",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

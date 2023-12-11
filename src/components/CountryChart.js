@@ -33,7 +33,7 @@ export default function CountryChart() {
   return (
     <div
       style={{
-        backgroundColor: "#D7D7D7",
+        backgroundColor: "#fff",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

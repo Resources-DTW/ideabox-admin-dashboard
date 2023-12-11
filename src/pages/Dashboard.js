@@ -1,18 +1,6 @@
-import React, { useEffect, useState } from "react";
-import {
-  Button,
-  Image,
-  Layout,
-  Menu,
-  Statistic,
-  Space,
-  Typography,
-} from "antd";
-import { PiCoinsThin } from "react-icons/pi";
-import { TbTruckDelivery } from "react-icons/tb";
-import { BsBox2 } from "react-icons/bs";
-import { HiOutlineUsers } from "react-icons/hi2";
-import { MdOutlineHomeRepairService } from "react-icons/md";
+import React, { useState } from "react";
+import { Statistic, Space, Col, Card, Row } from "antd";
+import { UserSwitchOutlined } from "@ant-design/icons";
 import LineChart from "../components/LineChart";
 import PieChart from "../components/PieChart";
 import { Link } from "react-router-dom";
@@ -25,50 +13,151 @@ export default function Dashboard() {
 
   return (
     <>
-      <Space
-        direction="vertical"
+      {/* <div
         style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: "100%",
-          margin: 20,
-          gap: 20,
+          padding: 20,
         }}
       >
-        <div
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            flexDirection: "row",
-            display: "flex",
-            margniLeft: 20,
-            marginRight: 20,
-            gap: 220,
-          }}
-        >
-          <DashboardCard title={"Total Materials"} count={120} />
-          <DashboardCard title={"Total Patients"} count={2120} />
-          <DashboardCard title={"Total Clinicians"} count={1120} />
-        </div>
-        <div
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            flexDirection: "row",
-            display: "flex",
-            margniLeft: 20,
-            marginRight: 20,
-            gap: 220,
-          }}
-        >
-          <DashboardCard title={"Subscribed User"} count={120} />
-          <DashboardCard title={"Guest Users"} count={120} />
-          <DashboardCard title={"Clinicians"} count={120} />
-        </div>
-      </Space>
+        <Row gutter={18}>
+          
+        </Row>
+      </div> */}
+      <div style={{ padding: 20 }}>
+        <Row gutter={18}>
+          <Col span={4}>
+            <Card bordered={true}>
+              <Statistic
+                title="Subscribed User"
+                value={120}
+                prefix={
+                  <div
+                    style={{
+                      paddingLeft: 10,
+                      paddingRight: 10,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      backgroundColor: "#35A8DF",
+                      borderRadius: 4,
+                    }}
+                  >
+                    <UserSwitchOutlined style={{ color: "white" }} />
+                  </div>
+                }
+              />
+            </Card>
+          </Col>
+          <Col span={4}>
+            <Card bordered={true}>
+              <Statistic
+                title="Guest Users"
+                value={120}
+                prefix={
+                  <div
+                    style={{
+                      paddingLeft: 10,
+                      paddingRight: 10,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      backgroundColor: "#35A8DF",
+                      borderRadius: 4,
+                    }}
+                  >
+                    <UserSwitchOutlined style={{ color: "white" }} />
+                  </div>
+                }
+              />
+            </Card>
+          </Col>
+          <Col span={4}>
+            <Card bordered={true}>
+              <Statistic
+                title="Clinicians"
+                value={120}
+                prefix={
+                  <div
+                    style={{
+                      paddingLeft: 10,
+                      paddingRight: 10,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      backgroundColor: "#35A8DF",
+                      borderRadius: 4,
+                    }}
+                  >
+                    <UserSwitchOutlined style={{ color: "white" }} />
+                  </div>
+                }
+              />
+            </Card>
+          </Col>
+          <Col span={4}>
+            <Card bordered={true}>
+              <Statistic
+                title="Total Materials"
+                value={120}
+                prefix={
+                  <div
+                    style={{
+                      paddingLeft: 10,
+                      paddingRight: 10,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      backgroundColor: "#35A8DF",
+                      borderRadius: 4,
+                    }}
+                  >
+                    <UserSwitchOutlined style={{ color: "white" }} />
+                  </div>
+                }
+              />
+            </Card>
+          </Col>
+          <Col span={4}>
+            <Card bordered={true}>
+              <Statistic
+                title="Total Patients"
+                value={2120}
+                prefix={
+                  <div
+                    style={{
+                      paddingLeft: 10,
+                      paddingRight: 10,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      backgroundColor: "#35A8DF",
+                      borderRadius: 4,
+                    }}
+                  >
+                    <UserSwitchOutlined style={{ color: "white" }} />
+                  </div>
+                }
+              />
+            </Card>
+          </Col>
+          <Col span={4}>
+            <Card bordered={true}>
+              <Statistic
+                title="Total Clinicians"
+                value={1120}
+                prefix={
+                  <div
+                    style={{
+                      paddingLeft: 10,
+                      paddingRight: 10,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      backgroundColor: "#35A8DF",
+                      borderRadius: 4,
+                    }}
+                  >
+                    <UserSwitchOutlined style={{ color: "white" }} />
+                  </div>
+                }
+              />
+            </Card>
+          </Col>
+        </Row>
+      </div>
       <div
         style={{
           flexDirection: "row",
@@ -76,8 +165,7 @@ export default function Dashboard() {
           justifyContent: "space-evenly",
           width: "100%",
           display: "flex",
-          marginTop: 50,
-          marginBottom: 50,
+          marginBottom: 20,
         }}
       >
         <div>

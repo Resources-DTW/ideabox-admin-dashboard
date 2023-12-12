@@ -21,7 +21,11 @@ import { BsCarFront, BsFillBuildingFill } from "react-icons/bs";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { LeftOutlined, UserSwitchOutlined } from "@ant-design/icons";
+import {
+  LeftOutlined,
+  ArrowUpOutlined,
+  ArrowDownOutlined,
+} from "@ant-design/icons";
 import Search from "antd/es/input/Search";
 import React, { useState } from "react";
 
@@ -304,7 +308,9 @@ export default function Materials() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#fff", padding: 30 }}>
+        <Content
+          style={{ backgroundColor: "#fff", paddingLeft: 30, paddingRight: 30 }}
+        >
           <div
             style={{
               width: "100%",
@@ -314,7 +320,7 @@ export default function Materials() {
               paddingBottom: 20,
             }}
           >
-            <h1 style={{ fontWeight: 400, color: "#15192c" }}>
+            <h1 style={{ fontSize: 18, fontWeight: 600, color: "#15192c" }}>
               Materials / Clinical resources management
             </h1>
             <Button
@@ -327,52 +333,42 @@ export default function Materials() {
               Add Disorder
             </Button>
           </div>
-          <Row gutter={24} style={{ paddingBottom: 30 }}>
-            <Col span={12}>
-              <Card bordered={true}>
-                <Statistic
-                  title="Total Disorders"
-                  value={12}
-                  prefix={
-                    <div
-                      style={{
-                        paddingLeft: 10,
-                        paddingRight: 10,
-                        backgroundColor: "#35A8DF",
-                        borderRadius: 4,
-                      }}
-                    >
-                      <UserSwitchOutlined
-                        style={{ color: "white", width: 14 }}
-                      />
-                    </div>
-                  }
-                />
-              </Card>
-            </Col>
-            <Col span={12}>
-              <Card bordered={true}>
-                <Statistic
-                  title="Total Materials"
-                  value={12}
-                  prefix={
-                    <div
-                      style={{
-                        paddingLeft: 10,
-                        paddingRight: 10,
-                        backgroundColor: "#35A8DF",
-                        borderRadius: 4,
-                      }}
-                    >
-                      <UserSwitchOutlined
-                        style={{ color: "white", width: 14 }}
-                      />
-                    </div>
-                  }
-                />
-              </Card>
-            </Col>
-          </Row>
+          <div style={{ padding: 20 }}>
+            <Row gutter={24}>
+              <Col span={12}>
+                <Card bordered={true}>
+                  <Statistic
+                    title="Total Disorders"
+                    value={2120}
+                    precision={2}
+                    style={{ fontWeight: 600 }}
+                    valueStyle={{
+                      color: "#3f8600",
+                      fontSize: 16,
+                    }}
+                    prefix={<ArrowUpOutlined />}
+                    suffix="+"
+                  />
+                </Card>
+              </Col>
+              <Col span={12}>
+                <Card bordered={true}>
+                  <Statistic
+                    title="Total Materials"
+                    value={120}
+                    precision={2}
+                    style={{ fontWeight: 600 }}
+                    valueStyle={{
+                      color: "#cf1322",
+                      fontSize: 16,
+                    }}
+                    prefix={<ArrowDownOutlined />}
+                    suffix="-"
+                  />
+                </Card>
+              </Col>
+            </Row>
+          </div>
           <Collapse
             style={{
               background: token.colorBgContainer,

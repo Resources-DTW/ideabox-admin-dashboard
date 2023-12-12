@@ -1,6 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import { Content, Header } from "antd/es/layout/layout";
-import { Button, Collapse, Image, Layout, Menu, theme } from "antd";
+import {
+  Button,
+  Card,
+  Col,
+  Collapse,
+  Image,
+  Layout,
+  Menu,
+  Row,
+  Statistic,
+  theme,
+} from "antd";
 import Logo from "../assets/logo.png";
 import Sider from "antd/es/layout/Sider";
 import { BiHomeAlt2 } from "react-icons/bi";
@@ -10,7 +21,11 @@ import { BsCarFront, BsFillBuildingFill } from "react-icons/bs";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { LeftOutlined } from "@ant-design/icons";
+import {
+  LeftOutlined,
+  ArrowUpOutlined,
+  ArrowDownOutlined,
+} from "@ant-design/icons";
 import Search from "antd/es/input/Search";
 import React, { useState } from "react";
 
@@ -293,61 +308,48 @@ export default function ActivityTaskManage() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#F8F9FC", padding: 50 }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-              flexDirection: "row",
-              paddingBottom: 40,
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: "#35A8DF",
-                width: "40%",
-                height: "10%",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                padding: 20,
-                borderRadius: 10,
-                display: "flex",
-                flexDirection: "row",
-                gap: 20,
-              }}
-            >
-              <h1 style={{ fontSize: 24, color: "white", fontWeight: 400 }}>
-                Category
-              </h1>
-              <p style={{ fontSize: 24, fontWeight: "bold", color: "white" }}>
-                10
-              </p>
-            </div>
-            <div
-              style={{
-                backgroundColor: "#35A8DF",
-                width: "40%",
-                height: "10%",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                padding: 20,
-                borderRadius: 10,
-                display: "flex",
-                flexDirection: "row",
-                gap: 20,
-              }}
-            >
-              <h1 style={{ fontSize: 24, color: "white", fontWeight: 400 }}>
-                Activities
-              </h1>
-              <p style={{ fontSize: 24, fontWeight: "bold", color: "white" }}>
-                100
-              </p>
-            </div>
+        <Content
+          style={{
+            backgroundColor: "#F8F9FC",
+            paddingLeft: 30,
+            paddintRight: 30,
+          }}
+        >
+          <div style={{ padding: 20 }}>
+            <Row gutter={24}>
+              <Col span={12}>
+                <Card bordered={true}>
+                  <Statistic
+                    title="Total Disorders"
+                    value={2120}
+                    precision={2}
+                    style={{ fontWeight: 600 }}
+                    valueStyle={{
+                      color: "#3f8600",
+                      fontSize: 16,
+                    }}
+                    prefix={<ArrowUpOutlined />}
+                    suffix="+"
+                  />
+                </Card>
+              </Col>
+              <Col span={12}>
+                <Card bordered={true}>
+                  <Statistic
+                    title="Total Materials"
+                    value={120}
+                    precision={2}
+                    style={{ fontWeight: 600 }}
+                    valueStyle={{
+                      color: "#cf1322",
+                      fontSize: 16,
+                    }}
+                    prefix={<ArrowDownOutlined />}
+                    suffix="-"
+                  />
+                </Card>
+              </Col>
+            </Row>
           </div>
           <Collapse
             style={{

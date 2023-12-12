@@ -31,16 +31,7 @@ export default function LineChart() {
   };
 
   return (
-    <div
-      style={{
-        backgroundColor: "#fff",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 20,
-        borderRadius: 10,
-      }}
-    >
+    <div>
       <Line {...config} />
     </div>
   );

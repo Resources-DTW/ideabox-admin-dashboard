@@ -21,7 +21,7 @@ export default function KpiConfig() {
   const onSearch = (value, _e, info) => console.log(info?.source, value);
 
   return (
-    <Layout style={{ height: "100vh", width: "100%" }}>
+    <Layout style={{ height: "100%", width: "100%" }}>
       <Sider
         style={{
           backgroundColor: "#35A8DF",
@@ -141,7 +141,7 @@ export default function KpiConfig() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#FFF" }}>
+        <Content style={{ backgroundColor: "#F8F9FC" }}>
           KPI Configuration Page
         </Content>
       </Layout>

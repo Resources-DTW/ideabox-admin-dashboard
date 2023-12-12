@@ -1,10 +1,39 @@
 import React, { useState } from "react";
-import { Statistic, Space, Col, Card, Row } from "antd";
+import { Statistic, Col, Card, Row, Avatar, List } from "antd";
 import { UserSwitchOutlined } from "@ant-design/icons";
 import LineChart from "../components/LineChart";
 import PieChart from "../components/PieChart";
-import { Link } from "react-router-dom";
 import CountryChart from "../components/CountryChart";
+
+const disorderData = [
+  {
+    title: "Disorder 1",
+  },
+  {
+    title: "Disorder 2",
+  },
+  {
+    title: "Disorder 3",
+  },
+  {
+    title: "Disorder 4",
+  },
+];
+
+const materialData = [
+  {
+    title: "Material 1",
+  },
+  {
+    title: "Material 2",
+  },
+  {
+    title: "Material 3",
+  },
+  {
+    title: "Material 4",
+  },
+];
 
 export default function Dashboard() {
   const [loading, setLoading] = useState(false);
@@ -23,7 +52,7 @@ export default function Dashboard() {
         </Row>
       </div> */}
       <div style={{ padding: 20 }}>
-        <Row gutter={18}>
+        <Row gutter={8}>
           <Col span={4}>
             <Card bordered={true}>
               <Statistic
@@ -34,13 +63,11 @@ export default function Dashboard() {
                     style={{
                       paddingLeft: 10,
                       paddingRight: 10,
-                      paddingTop: 5,
-                      paddingBottom: 5,
                       backgroundColor: "#35A8DF",
                       borderRadius: 4,
                     }}
                   >
-                    <UserSwitchOutlined style={{ color: "white" }} />
+                    <UserSwitchOutlined style={{ color: "white", width: 14 }} />
                   </div>
                 }
               />
@@ -56,13 +83,11 @@ export default function Dashboard() {
                     style={{
                       paddingLeft: 10,
                       paddingRight: 10,
-                      paddingTop: 5,
-                      paddingBottom: 5,
                       backgroundColor: "#35A8DF",
                       borderRadius: 4,
                     }}
                   >
-                    <UserSwitchOutlined style={{ color: "white" }} />
+                    <UserSwitchOutlined style={{ color: "white", width: 14 }} />
                   </div>
                 }
               />
@@ -78,13 +103,11 @@ export default function Dashboard() {
                     style={{
                       paddingLeft: 10,
                       paddingRight: 10,
-                      paddingTop: 5,
-                      paddingBottom: 5,
                       backgroundColor: "#35A8DF",
                       borderRadius: 4,
                     }}
                   >
-                    <UserSwitchOutlined style={{ color: "white" }} />
+                    <UserSwitchOutlined style={{ color: "white", width: 14 }} />
                   </div>
                 }
               />
@@ -100,13 +123,11 @@ export default function Dashboard() {
                     style={{
                       paddingLeft: 10,
                       paddingRight: 10,
-                      paddingTop: 5,
-                      paddingBottom: 5,
                       backgroundColor: "#35A8DF",
                       borderRadius: 4,
                     }}
                   >
-                    <UserSwitchOutlined style={{ color: "white" }} />
+                    <UserSwitchOutlined style={{ color: "white", width: 14 }} />
                   </div>
                 }
               />
@@ -122,13 +143,11 @@ export default function Dashboard() {
                     style={{
                       paddingLeft: 10,
                       paddingRight: 10,
-                      paddingTop: 5,
-                      paddingBottom: 5,
                       backgroundColor: "#35A8DF",
                       borderRadius: 4,
                     }}
                   >
-                    <UserSwitchOutlined style={{ color: "white" }} />
+                    <UserSwitchOutlined style={{ color: "white", width: 14 }} />
                   </div>
                 }
               />
@@ -144,13 +163,11 @@ export default function Dashboard() {
                     style={{
                       paddingLeft: 10,
                       paddingRight: 10,
-                      paddingTop: 5,
-                      paddingBottom: 5,
                       backgroundColor: "#35A8DF",
                       borderRadius: 4,
                     }}
                   >
-                    <UserSwitchOutlined style={{ color: "white" }} />
+                    <UserSwitchOutlined style={{ color: "white", width: 14 }} />
                   </div>
                 }
               />
@@ -168,10 +185,22 @@ export default function Dashboard() {
           marginBottom: 20,
         }}
       >
-        <div>
+        <div
+          style={{
+            backgroundColor: "#fff",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+            textAlign: "left",
+            padding: 20,
+            borderRadius: 10,
+          }}
+        >
+          <h1 style={{ fontSize: 24, fontWeight: 400 }}>Daily Users</h1>
           <LineChart />
         </div>
-        <div>
+        <div style={{ backgroundColor: "#FFF", borderRadius: 20 }}>
           <PieChart />
         </div>
       </div>
@@ -188,161 +217,65 @@ export default function Dashboard() {
         <div
           style={{
             height: "40%",
-            width: "40%",
-            backgroundColor: "#D7D7D7",
+            width: "45%",
+            backgroundColor: "#fff",
             borderRadius: 10,
-            textAlign: "center",
+            textAlign: "left",
             padding: 20,
             display: "flex",
             flexDirection: "column",
           }}
         >
-          <h1 style={{ fontSize: 24 }}>Most Used Disorders</h1>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 10,
-              alignItems: "center",
-            }}
-          >
-            <Link
-              to="#"
-              style={{
-                color: "#000",
-                textDecoration: "none",
-                fontSize: 24,
-                fontWeight: 400,
-              }}
-            >
-              Disorders 1
-            </Link>
-            <Link
-              to="#"
-              style={{
-                color: "#000",
-                textDecoration: "none",
-                fontSize: 24,
-                fontWeight: 400,
-              }}
-            >
-              Disorders 2
-            </Link>
-            <Link
-              to="#"
-              style={{
-                color: "#000",
-                textDecoration: "none",
-                fontSize: 24,
-                fontWeight: 400,
-              }}
-            >
-              Disorders 3
-            </Link>
-            <Link
-              to="#"
-              style={{
-                color: "#000",
-                textDecoration: "none",
-                fontSize: 24,
-                fontWeight: 400,
-              }}
-            >
-              Disorders 4
-            </Link>
-          </div>
+          <h1 style={{ fontSize: 24, fontWeight: 400 }}>Most Used Disorders</h1>
+          <List
+            itemLayout="horizontal"
+            dataSource={disorderData}
+            renderItem={(item, index) => (
+              <List.Item>
+                <List.Item.Meta
+                  avatar={
+                    <Avatar
+                      src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`}
+                    />
+                  }
+                  title={<a href="/materials">{item.title}</a>}
+                />
+              </List.Item>
+            )}
+          />
         </div>
         <div
           style={{
             height: "40%",
-            width: "40%",
-            backgroundColor: "#D7D7D7",
+            width: "45%",
+            backgroundColor: "#fff",
             borderRadius: 10,
-            textAlign: "center",
+            textAlign: "left",
             padding: 20,
           }}
         >
-          <h1 style={{ fontSize: 24 }}>Most Used Materials</h1>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 10,
-              alignItems: "center",
-            }}
-          >
-            <Link
-              to="#"
-              style={{
-                color: "#000",
-                textDecoration: "none",
-                fontSize: 24,
-                fontWeight: 400,
-              }}
-            >
-              Materials 1
-            </Link>
-            <Link
-              to="#"
-              style={{
-                color: "#000",
-                textDecoration: "none",
-                fontSize: 24,
-                fontWeight: 400,
-              }}
-            >
-              Materials 2
-            </Link>
-            <Link
-              to="#"
-              style={{
-                color: "#000",
-                textDecoration: "none",
-                fontSize: 24,
-                fontWeight: 400,
-              }}
-            >
-              Materials 3
-            </Link>
-            <Link
-              to="#"
-              style={{
-                color: "#000",
-                textDecoration: "none",
-                fontSize: 24,
-                fontWeight: 400,
-              }}
-            >
-              Materials 4
-            </Link>
-          </div>
+          <h1 style={{ fontSize: 24, fontWeight: 400 }}>Most Used Materials</h1>
+          <List
+            itemLayout="horizontal"
+            dataSource={materialData}
+            renderItem={(item, index) => (
+              <List.Item>
+                <List.Item.Meta
+                  avatar={
+                    <Avatar
+                      src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`}
+                    />
+                  }
+                  title={<a href="/materials">{item.title}</a>}
+                />
+              </List.Item>
+            )}
+          />
         </div>
       </div>
-      <div style={{ marginLeft: 90, marginRight: 90, paddingBottom: 50 }}>
+      <div style={{ marginLeft: 30, marginRight: 30, paddingBottom: 50 }}>
         <CountryChart />
       </div>
     </>
   );
-
-  function DashboardCard({ title, count, icon }) {
-    return (
-      <div
-        style={{
-          backgroundColor: "#D7D7D7",
-          width: 232,
-          height: 166,
-          borderRadius: 10,
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          display: "flex",
-        }}
-      >
-        <Space direction="horizontal">
-          {icon}
-          <Statistic title={title} value={count} />
-        </Space>
-      </div>
-    );
-  }
 }

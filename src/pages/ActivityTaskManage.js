@@ -29,15 +29,16 @@ export default function ActivityTaskManage() {
             display: "flex",
             flexDirection: "row",
             width: "100%",
+            height: 32,
             alignItems: "center",
             justifyContent: "space-between",
             paddingLeft: 10,
             paddingRight: 10,
           }}
         >
-          <h1 style={{ fontSize: 24, fontWeight: 400 }}>Category 1</h1>
-          <p style={{ fontSize: 24 }}>Patient/ Clinical</p>
-          <p style={{ fontSize: 24, fontWeight: 600 }}>Activities 10</p>
+          <h1 style={{ fontSize: 18, fontWeight: 400 }}>Category 1</h1>
+          <p style={{ fontSize: 18 }}>Patient/ Clinical</p>
+          <p style={{ fontSize: 18, fontWeight: 600 }}>Activities 10</p>
         </div>
       ),
       children: (
@@ -54,7 +55,7 @@ export default function ActivityTaskManage() {
             <Button type="primary">Edit</Button>
           </div>
           <p>Patient/ Clinical</p>
-          <p style={{ fontSize: 20, fontWeight: 700 }}>About The Cource</p>
+          <p style={{ fontSize: 14, fontWeight: 700 }}>About The Cource</p>
           <p>6 Days Training Program.</p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -75,15 +76,16 @@ export default function ActivityTaskManage() {
             display: "flex",
             flexDirection: "row",
             width: "100%",
+            height: 32,
             alignItems: "center",
             justifyContent: "space-between",
             paddingLeft: 10,
             paddingRight: 10,
           }}
         >
-          <h1 style={{ fontSize: 24, fontWeight: 400 }}>Category 2</h1>
-          <p style={{ fontSize: 24 }}>Patient/ Clinical</p>
-          <p style={{ fontSize: 24, fontWeight: 600 }}>Activities 10</p>
+          <h1 style={{ fontSize: 18, fontWeight: 400 }}>Category 2</h1>
+          <p style={{ fontSize: 18 }}>Patient/ Clinical</p>
+          <p style={{ fontSize: 18, fontWeight: 600 }}>Activities 10</p>
         </div>
       ),
       children: (
@@ -100,7 +102,7 @@ export default function ActivityTaskManage() {
             <Button type="primary">Edit</Button>
           </div>
           <p>Patient/ Clinical</p>
-          <p style={{ fontSize: 20, fontWeight: 700 }}>About The Cource</p>
+          <p style={{ fontSize: 14, fontWeight: 700 }}>About The Cource</p>
           <p>6 Days Training Program.</p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -121,15 +123,16 @@ export default function ActivityTaskManage() {
             display: "flex",
             flexDirection: "row",
             width: "100%",
+            height: 32,
             alignItems: "center",
             justifyContent: "space-between",
             paddingLeft: 10,
             paddingRight: 10,
           }}
         >
-          <h1 style={{ fontSize: 24, fontWeight: 400 }}>Category 3</h1>
-          <p style={{ fontSize: 24 }}>Patient/ Clinical</p>
-          <p style={{ fontSize: 24, fontWeight: 600 }}>Activities 10</p>
+          <h1 style={{ fontSize: 18, fontWeight: 400 }}>Category 3</h1>
+          <p style={{ fontSize: 18 }}>Patient/ Clinical</p>
+          <p style={{ fontSize: 18, fontWeight: 600 }}>Activities 10</p>
         </div>
       ),
       children: (
@@ -146,7 +149,7 @@ export default function ActivityTaskManage() {
             <Button type="primary">Edit</Button>
           </div>
           <p>Patient/ Clinical</p>
-          <p style={{ fontSize: 20, fontWeight: 700 }}>About The Cource</p>
+          <p style={{ fontSize: 14, fontWeight: 700 }}>About The Cource</p>
           <p>6 Days Training Program.</p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -170,7 +173,7 @@ export default function ActivityTaskManage() {
   };
 
   return (
-    <Layout style={{ height: "100vh", width: "100%" }}>
+    <Layout style={{ height: "100%", width: "100%" }}>
       <Sider
         style={{
           backgroundColor: "#35A8DF",
@@ -290,7 +293,7 @@ export default function ActivityTaskManage() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#FFF", padding: 50 }}>
+        <Content style={{ backgroundColor: "#F8F9FC", padding: 50 }}>
           <div
             style={{
               display: "flex",

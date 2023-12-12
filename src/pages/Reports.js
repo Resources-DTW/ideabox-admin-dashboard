@@ -21,7 +21,7 @@ export default function Reports() {
   const onSearch = (value, _e, info) => console.log(info?.source, value);
 
   return (
-    <Layout style={{ height: "100vh", width: "100%" }}>
+    <Layout style={{ height: "100%", width: "100%" }}>
       <Sider
         style={{
           backgroundColor: "#35A8DF",
@@ -141,7 +141,7 @@ export default function Reports() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#FFF" }}>Reports Page</Content>
+        <Content style={{ backgroundColor: "#F8F9FC" }}>Reports Page</Content>
       </Layout>
     </Layout>
   );

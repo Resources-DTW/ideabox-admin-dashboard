@@ -1,6 +1,17 @@
 import { useNavigate } from "react-router-dom";
 import { Content, Header } from "antd/es/layout/layout";
-import { Button, Image, Layout, Menu, Collapse, theme } from "antd";
+import {
+  Button,
+  Image,
+  Layout,
+  Menu,
+  Collapse,
+  theme,
+  Row,
+  Col,
+  Card,
+  Statistic,
+} from "antd";
 import Logo from "../assets/logo.png";
 import Sider from "antd/es/layout/Sider";
 import { BiHomeAlt2 } from "react-icons/bi";
@@ -10,7 +21,7 @@ import { BsCarFront, BsFillBuildingFill } from "react-icons/bs";
 import { RiCustomerService2Line } from "react-icons/ri";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { LeftOutlined } from "@ant-design/icons";
+import { LeftOutlined, UserSwitchOutlined } from "@ant-design/icons";
 import Search from "antd/es/input/Search";
 import React, { useState } from "react";
 
@@ -29,15 +40,16 @@ export default function Materials() {
             display: "flex",
             flexDirection: "row",
             width: "100%",
+            height: 32,
             alignItems: "center",
             justifyContent: "space-between",
             paddingLeft: 10,
             paddingRight: 10,
           }}
         >
-          <h1 style={{ fontSize: 24, fontWeight: 400 }}>Disorder 1</h1>
-          <p style={{ fontSize: 24 }}>Patient/ Clinical</p>
-          <p style={{ fontSize: 24, fontWeight: 600 }}>Total Materials 10</p>
+          <h1 style={{ fontSize: 18, fontWeight: 400 }}>Disorder 1</h1>
+          <p style={{ fontSize: 18 }}>Patient/ Clinical</p>
+          <p style={{ fontSize: 18, fontWeight: 600 }}>Total Materials 10</p>
         </div>
       ),
       children: (
@@ -54,7 +66,7 @@ export default function Materials() {
             <Button type="primary">Edit</Button>
           </div>
           <p>Patient/ Clinical</p>
-          <p style={{ fontSize: 20, fontWeight: 700 }}>About The Cource</p>
+          <p style={{ fontSize: 14, fontWeight: 700 }}>About The Cource</p>
           <p>6 Days Training Program.</p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -75,15 +87,16 @@ export default function Materials() {
             display: "flex",
             flexDirection: "row",
             width: "100%",
+            height: 32,
             alignItems: "center",
             justifyContent: "space-between",
             paddingLeft: 10,
             paddingRight: 10,
           }}
         >
-          <h1 style={{ fontSize: 24, fontWeight: 400 }}>Disorder 2</h1>
-          <p style={{ fontSize: 24 }}>Patient/ Clinical</p>
-          <p style={{ fontSize: 24, fontWeight: 600 }}>Total Materials 10</p>
+          <h1 style={{ fontSize: 18, fontWeight: 400 }}>Disorder 2</h1>
+          <p style={{ fontSize: 18 }}>Patient/ Clinical</p>
+          <p style={{ fontSize: 18, fontWeight: 600 }}>Total Materials 10</p>
         </div>
       ),
       children: (
@@ -100,7 +113,7 @@ export default function Materials() {
             <Button type="primary">Edit</Button>
           </div>
           <p>Patient/ Clinical</p>
-          <p style={{ fontSize: 20, fontWeight: 700 }}>About The Cource</p>
+          <p style={{ fontSize: 14, fontWeight: 700 }}>About The Cource</p>
           <p>6 Days Training Program.</p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -121,15 +134,16 @@ export default function Materials() {
             display: "flex",
             flexDirection: "row",
             width: "100%",
+            height: 32,
             alignItems: "center",
             justifyContent: "space-between",
             paddingLeft: 10,
             paddingRight: 10,
           }}
         >
-          <h1 style={{ fontSize: 24, fontWeight: 400 }}>Disorder 3</h1>
-          <p style={{ fontSize: 24 }}>Patient/ Clinical</p>
-          <p style={{ fontSize: 24, fontWeight: 600 }}>Total Materials 10</p>
+          <h1 style={{ fontSize: 18, fontWeight: 400 }}>Disorder 3</h1>
+          <p style={{ fontSize: 18 }}>Patient/ Clinical</p>
+          <p style={{ fontSize: 18, fontWeight: 600 }}>Total Materials 10</p>
         </div>
       ),
       children: (
@@ -146,7 +160,7 @@ export default function Materials() {
             <Button type="primary">Edit</Button>
           </div>
           <p>Patient/ Clinical</p>
-          <p style={{ fontSize: 20, fontWeight: 700 }}>About The Cource</p>
+          <p style={{ fontSize: 14, fontWeight: 700 }}>About The Cource</p>
           <p>6 Days Training Program.</p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -170,7 +184,7 @@ export default function Materials() {
   };
 
   return (
-    <Layout style={{ height: "100vh", width: "100%" }}>
+    <Layout style={{ height: "100%", width: "100%" }}>
       <Sider
         style={{
           backgroundColor: "#35A8DF",
@@ -290,16 +304,19 @@ export default function Materials() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#FFF", padding: 50 }}>
+        <Content style={{ backgroundColor: "#fff", padding: 30 }}>
           <div
             style={{
               width: "100%",
               display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "end",
-              paddingBottom: 50,
+              alignItems: "center",
+              justifyContent: "space-between",
+              paddingBottom: 20,
             }}
           >
+            <h1 style={{ fontWeight: 400, color: "#15192c" }}>
+              Materials / Clinical resources management
+            </h1>
             <Button
               type="primary"
               style={{
@@ -310,61 +327,52 @@ export default function Materials() {
               Add Disorder
             </Button>
           </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-              flexDirection: "row",
-              paddingBottom: 40,
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: "#35A8DF",
-                width: "40%",
-                height: "10%",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                padding: 20,
-                borderRadius: 10,
-                display: "flex",
-                flexDirection: "row",
-                gap: 20,
-              }}
-            >
-              <h1 style={{ fontSize: 24, color: "white", fontWeight: 400 }}>
-                Total Disorders
-              </h1>
-              <p style={{ fontSize: 24, fontWeight: "bold", color: "white" }}>
-                12
-              </p>
-            </div>
-            <div
-              style={{
-                backgroundColor: "#35A8DF",
-                width: "40%",
-                height: "10%",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-                padding: 20,
-                borderRadius: 10,
-                display: "flex",
-                flexDirection: "row",
-                gap: 20,
-              }}
-            >
-              <h1 style={{ fontSize: 24, color: "white", fontWeight: 400 }}>
-                Total Materials
-              </h1>
-              <p style={{ fontSize: 24, fontWeight: "bold", color: "white" }}>
-                120
-              </p>
-            </div>
-          </div>
+          <Row gutter={24} style={{ paddingBottom: 30 }}>
+            <Col span={12}>
+              <Card bordered={true}>
+                <Statistic
+                  title="Total Disorders"
+                  value={12}
+                  prefix={
+                    <div
+                      style={{
+                        paddingLeft: 10,
+                        paddingRight: 10,
+                        backgroundColor: "#35A8DF",
+                        borderRadius: 4,
+                      }}
+                    >
+                      <UserSwitchOutlined
+                        style={{ color: "white", width: 14 }}
+                      />
+                    </div>
+                  }
+                />
+              </Card>
+            </Col>
+            <Col span={12}>
+              <Card bordered={true}>
+                <Statistic
+                  title="Total Materials"
+                  value={12}
+                  prefix={
+                    <div
+                      style={{
+                        paddingLeft: 10,
+                        paddingRight: 10,
+                        backgroundColor: "#35A8DF",
+                        borderRadius: 4,
+                      }}
+                    >
+                      <UserSwitchOutlined
+                        style={{ color: "white", width: 14 }}
+                      />
+                    </div>
+                  }
+                />
+              </Card>
+            </Col>
+          </Row>
           <Collapse
             style={{
               background: token.colorBgContainer,

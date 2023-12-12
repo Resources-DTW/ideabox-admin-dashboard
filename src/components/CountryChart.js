@@ -14,7 +14,7 @@ export default function CountryChart() {
 
   const config = {
     data,
-    width: 800,
+    width: 900,
     height: 300,
     autoFit: false,
     xField: "country",

@@ -22,7 +22,7 @@ function App() {
   const onSearch = (value, _e, info) => console.log(info?.source, value);
 
   return (
-    <Layout style={{ height: "100vh", width: "100%" }}>
+    <Layout style={{ height: "100%", width: "100%" }}>
       <Sider
         style={{
           backgroundColor: "#35A8DF",
@@ -30,6 +30,7 @@ function App() {
           // borderRadius: 16,
           marginTop: -10,
           marginLeft: -10,
+          marginBottom: -10,
         }}
         trigger={null}
         collapsible
@@ -63,7 +64,10 @@ function App() {
           />
         )}
         <Menu
-          style={{ backgroundColor: "#35A8DF", color: "white" }}
+          style={{
+            backgroundColor: "#35A8DF",
+            color: "white",
+          }}
           mode="inline"
           defaultSelectedKeys={["/dashboard"]}
           onClick={(item) => {
@@ -142,7 +146,7 @@ function App() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#FFF" }}>
+        <Content style={{ backgroundColor: "#F8F9FC" }}>
           <Dashboard />
         </Content>
       </Layout>

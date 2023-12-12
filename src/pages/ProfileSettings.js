@@ -29,7 +29,7 @@ export default function ProfileSettings() {
   const onSearch = (value, _e, info) => console.log(info?.source, value);
 
   return (
-    <Layout style={{ height: "100vh", width: "100%" }}>
+    <Layout style={{ height: "100%", width: "100%" }}>
       <Sider
         style={{
           backgroundColor: "#35A8DF",
@@ -151,10 +151,11 @@ export default function ProfileSettings() {
         </Header>
         <Content
           style={{
-            backgroundColor: "#FFF",
+            backgroundColor: "#F8F9FC",
             alignItems: "center",
             justifyContent: "center",
             display: "flex",
+            padding: 20,
           }}
         >
           <div
@@ -165,7 +166,7 @@ export default function ProfileSettings() {
               paddingTop: 50,
               paddingBottom: 50,
               borderRadius: 10,
-              backgroundColor: "#F5F5F5",
+              backgroundColor: "#fff",
             }}
           >
             <Avatar
@@ -194,7 +195,7 @@ export default function ProfileSettings() {
                 Edit
               </Button>
               <Button style={{ margin: 20 }} type="primary" danger>
-                Log Out
+                Logout
               </Button>
             </div>
           </div>

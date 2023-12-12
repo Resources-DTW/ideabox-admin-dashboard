@@ -64,7 +64,7 @@ export default function Subscriptions() {
   ];
 
   return (
-    <Layout style={{ height: "100vh", width: "100%" }}>
+    <Layout style={{ height: "100%", width: "100%" }}>
       <Sider
         style={{
           backgroundColor: "#35A8DF",
@@ -184,7 +184,7 @@ export default function Subscriptions() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#FFF" }}>
+        <Content style={{ backgroundColor: "#F8F9FC" }}>
           <div style={{ padding: 20 }}>
             <h1>Patient</h1>
             <div
@@ -207,8 +207,7 @@ export default function Subscriptions() {
                   key={i}
                   style={{
                     textAlign: "center",
-                    border: "1px solid #35A8DF",
-                    backgroundColor: "#35A8DF",
+                    backgroundColor: "#fff",
                     borderRadius: 10,
                     padding: 40,
                     cursor: "pointer",
@@ -219,7 +218,7 @@ export default function Subscriptions() {
                       fontSize: 19,
                       fontWeight: 500,
                       textAlign: "center",
-                      color: "white",
+                      color: "#000",
                     }}
                   >
                     {item.title}
@@ -227,14 +226,14 @@ export default function Subscriptions() {
                   <p
                     style={{
                       color: "white",
-                      border: "1px solid #fff",
+                      backgroundColor: "#35A8DF",
                       borderRadius: 20,
                       padding: 8,
                     }}
                   >
                     {item.duration}
                   </p>
-                  <p style={{ color: "white" }}>{item.desc}</p>
+                  <p style={{ color: "#000" }}>{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -267,10 +266,9 @@ export default function Subscriptions() {
                   }
                   style={{
                     textAlign: "center",
-                    border: "1px solid #35A8DF",
                     borderRadius: 10,
                     padding: 40,
-                    backgroundColor: "#35A8DF",
+                    backgroundColor: "#fff",
                     cursor: "pointer",
                   }}
                   key={i}
@@ -280,7 +278,7 @@ export default function Subscriptions() {
                       fontSize: 19,
                       fontWeight: 500,
                       textAlign: "center",
-                      color: "white",
+                      color: "#000",
                     }}
                   >
                     {item.title}
@@ -288,14 +286,14 @@ export default function Subscriptions() {
                   <p
                     style={{
                       color: "white",
-                      border: "1px solid #fff",
+                      backgroundColor: "#35A8DF",
                       borderRadius: 20,
                       padding: 8,
                     }}
                   >
                     {item.duration}
                   </p>
-                  <p style={{ color: "white" }}>{item.desc}</p>
+                  <p style={{ color: "#000" }}>{item.desc}</p>
                 </div>
               ))}
             </div>

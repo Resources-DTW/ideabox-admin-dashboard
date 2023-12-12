@@ -138,7 +138,7 @@ export default function Users() {
   };
 
   return (
-    <Layout style={{ height: "100vh", width: "100%" }}>
+    <Layout style={{ height: "100%", width: "100%" }}>
       <Sider
         style={{
           backgroundColor: "#35A8DF",
@@ -258,8 +258,8 @@ export default function Users() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#FFF", padding: 50 }}>
-          <div
+        <Content style={{ backgroundColor: "#F8F9FC", padding: 20 }}>
+          {/* <div
             style={{
               display: "flex",
               alignItems: "center",
@@ -293,9 +293,9 @@ export default function Users() {
               </h1>
               <h1 style={{ color: "#FFF" }}>1,120</h1>
             </div>
-          </div>
+          </div> */}
           <div style={{ padding: 20 }}>
-            <Row gutter={16}>
+            <Row gutter={24}>
               <Col span={12}>
                 <Card bordered={true}>
                   <Statistic

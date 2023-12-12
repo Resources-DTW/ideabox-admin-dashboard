@@ -49,7 +49,7 @@ export default function EditSubscription() {
   };
 
   return (
-    <Layout style={{ height: "100vh", width: "100%" }}>
+    <Layout style={{ height: "100%", width: "100%" }}>
       <Sider
         style={{
           backgroundColor: "#35A8DF",
@@ -169,7 +169,7 @@ export default function EditSubscription() {
             }}
           />
         </Header>
-        <Content style={{ backgroundColor: "#FFF", padding: 20 }}>
+        <Content style={{ backgroundColor: "#F8F9FC", padding: 20 }}>
           <h1>Edit {item.title}</h1>
           <Form
             labelCol={{

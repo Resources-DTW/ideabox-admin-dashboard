@@ -43,11 +43,11 @@ export default function Users() {
   const onSearch = (value, _e, info) => console.log(info?.source, value);
 
   const columns = [
-    {
-      title: "Profile Picture",
-      dataIndex: "image",
-      render: (image) => <img alt={image} src={image} width={42} />,
-    },
+    // {
+    //   title: "Profile Picture",
+    //   dataIndex: "image",
+    //   render: (image) => <img alt={image} src={image} width={32} />,
+    // },
     {
       title: "Name",
       dataIndex: "name",
@@ -367,6 +367,7 @@ export default function Users() {
             </Row>
           </div>
           <Table
+            // style={{ padding: 10 }}
             rowSelection={{
               type: selectionType,
               ...rowSelection,
